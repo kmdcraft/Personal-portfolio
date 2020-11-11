@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous" />
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
    <link rel="stylesheet" href="css/main.css">
    <title>Personal Portfolio Website</title>
 </head>
+
 <body>
    <div class="navbar">
       <!--This div VV will be a flex container(utility class of flex)-->
@@ -15,13 +20,62 @@
          <h1 class="logo">Kelly MacDougall</h1>
          <nav>
             <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="index.html">Link 2</a></li>
-               <li><a href="index.html">Link 3</a></li>
+               <li><a href="index.html">About</a></li>
+               <li><a href="index.html">My Work</a></li>
+               <li><a href="index.html">Contact Me</a></li>
             </ul>
          </nav>
       </div>
-   </nav>
-   
+   </div>
+
+   <section class="showcase">
+      <div class="container grid">
+         <div class="showcase-text">
+            <h1>Easier Deployment</h1>
+            <p>Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals. Fill
+               out the form to try a demo of our platform.</p>
+            <a href="features.html" class="btn btn-outline">Read More</a>
+         </div>
+         <div class="showcase-form card">
+            <h2>Request a Demo</h2>
+            <form>
+               <div class="form-control">
+                  <input type="text" name="name" placeholder="Name" required>
+               </div>
+               <div class="form-control">
+                  <input type="text" name="company" placeholder="Company Name" required>
+               </div>
+               <div class="form-control">
+                  <input type="email" name="email" placeholder="Email" required>
+               </div>
+               <input type="submit" value="Send" class="btn btn-primary">
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <section class="stats">
+      <div class="container">
+         <h3 class="stats-heading text-center my-1">Whatever your business needs are; i've got you covered.</h3>
+         <div class="grid grid-3 text-center my-4">
+            <div>
+               <i class="fas fa-server fa-3x"></i>
+               <h3>123,456</h3>
+               <p class="text-secondary">HTML5</p>
+            </div>
+            <div>
+               <i class="fas fa-upload fa-3x"></i>
+               <h3>987</h3>
+               <p class="text-secondary">CSS3</p>
+            </div>
+            <div>
+               <i class="fas fa-project-diagram fa-3x"></i>
+               <h3>34,567</h3>
+               <p class="text-secondary">JavaScript</p>
+            </div>
+         </div>
+      </div>
+   </section>
 </body>
+
 </html>

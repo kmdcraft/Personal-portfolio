@@ -1,3 +1,6 @@
+$primary-color: #8aa7ec;
+$gradient: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
 * {
    box-sizing: border-box;
    padding: 0;
@@ -33,12 +36,94 @@ img {
    width: 100%;
 }
 
+//Navigation
 .navbar {
-   background-color: #c3aed6;
+   background-color: $primary-color;
    color: white;
    height: 70px;
+
+   & ul {
+      display: flex;
+   }
+   & a {
+      color: white;
+      padding: 10px;
+      margin: 0 5px;
+
+      &:hover {
+         border-bottom: 2px whitesmoke solid;
+      }
+   }
 }
 
+.navbar .flex {
+   justify-content: space-between;
+}
+
+//Showcase-hero
+.showcase {
+   height: 400px;
+   //background-color: $primary-color;
+   background-image: $gradient;
+   color: white;
+   position: relative;
+   // padding-top: 30px;
+
+   & h1 {
+      font-size: 2.5rem;
+   }
+   & p {
+      margin: 20px 0;
+   }
+   & .grid {
+      overflow: visible;
+   }
+}
+
+.showcase::before,
+.showcase::after {
+   content: "";
+   position: absolute;
+   height: 100px;
+   bottom: -80px;
+   right: 0;
+   left: 0;
+   background:white;
+   transform: skewY(-1.4deg);
+   -webkit-transform: skewY(-1.4deg);
+   -moz-transform: skewY(-1.4deg);
+   -ms-transform: skewY(-1.4deg);
+}
+
+.showcase-form {
+   position: relative;
+   top: 60px;
+   height: 350px;
+   width: 350px;
+   padding: 40px;
+   z-index: 100;
+   justify-self: flex-end;
+
+   & .form-control {
+      margin: 20px 0;
+   }
+   & input[type="text"], input[type="email"] {
+      border: 0;
+      border-bottom: 1px solid #b4becb;
+      width: 90%;
+      padding: 3px;
+      font-size: 16px;
+   }
+   & input:focus {
+      outline: none;
+   }
+}
+
+.stats {
+   padding-top: 100px;
+}
+
+//Utility classes
 .container {
    max-width: 1100px;
    margin: 0 auto;
@@ -46,6 +131,47 @@ img {
    padding: 0 40px;
 }
 
+.card {
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+padding: 20px;
+margin: 10px;
+color: #333;
+}
+
+.btn {
+   display: inline-block;
+   padding: 10px 30px;
+   cursor: pointer;
+   color: white;
+   background: $primary-color;
+   border: none;
+   border-radius: 5px;
+
+   &:hover {
+      transform: scale(.98);
+   }
+}
+
+ .btn-outline {
+    background-color: transparent;
+    border: 1px white solid;
+ }
+
 .flex {
    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   // grid-template-columns: repeat(2fr 1fr);
+   gap: 30px;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
 }
