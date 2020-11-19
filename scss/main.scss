@@ -8,7 +8,7 @@
 
 body {
    font-family: 'Lato', sans-serif;
-   color: #333;
+   color: black;
    line-height: 1.6;
 }
 
@@ -18,7 +18,7 @@ ul {
 
 a {
    text-decoration: none;
-   color: #333;
+   color: $secondary-color;
 }
 
 h1, h2 {
@@ -37,20 +37,25 @@ img {
 
 //Navigation
 .navbar {
-   background-color: $primary-color;
-   color: white;
+   background-color: white;
+   color: black;
    height: 70px;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 200;
+   width: 100vw;
 
    & ul {
       display: flex;
    }
    & a {
-      color: white;
+      color: $accent;
       padding: 10px;
       margin: 0 5px;
 
       &:hover {
-         border-bottom: 2px whitesmoke solid;
+         border-bottom: 2px solid $accent;
       }
    }
 }
@@ -59,13 +64,21 @@ img {
    justify-content: space-between;
 }
 
+#logo {
+   font-family: 'Kaushan script', cursive;
+   font-weight: 300;
+   font-size: 1.5rem;
+}
+
 //Showcase-hero
 .showcase {
-   height: 400px;
-   //background-color: $primary-color;
-   background-image: $gradient;
-   color: white;
-   position: relative;
+   height: 100vh;
+   background-image: url(../img/hero1.jpg);
+   background-position: center;
+   background-size: cover;
+   //background-color: $bkgrnd;
+   color: $primary-color;
+   //position: relative;
    // padding-top: 30px;
 
    & h1 {
@@ -79,7 +92,7 @@ img {
    }
 }
 
-.showcase::before,
+/* .showcase::before,
 .showcase::after {
    content: "";
    position: absolute;
@@ -87,12 +100,12 @@ img {
    bottom: -80px;
    right: 0;
    left: 0;
-   background:white;
+   background: $secondary-color;
    transform: skewY(-1.4deg);
    -webkit-transform: skewY(-1.4deg);
    -moz-transform: skewY(-1.4deg);
    -ms-transform: skewY(-1.4deg);
-}
+} */
 
 .showcase-form {
    position: relative;
@@ -133,4 +146,38 @@ img {
 .stats-heading {
    max-width: 500px;
    margin: auto;
+}
+
+//Project section
+#work {
+   text-align: center;
+   font-weight: bolder;
+   padding-top: 15px;
+   margin-bottom: 40px;
+   font-family: 'Montserrat', sans-serif;
+   text-shadow: 2px 2px 3px rgb(184, 184, 184);
+}
+.projects {
+   margin-top: 50px;
+   margin-bottom: 60px;
+}
+
+//about me
+.about {
+   padding: 30px auto;
+   margin: 20px auto;
+   background-color: $accent;
+   height: 90vh;
+}
+
+.portrait {
+   float: left;
+   max-width: 20vw;
+   border-radius: 50%;
+   border: 3px solid black;
+}
+
+footer {
+   text-align: center;
+   background-color: $accent;
 }

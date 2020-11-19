@@ -1,5 +1,8 @@
-$primary-color: #8aa7ec;
-$gradient: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+$primary-color: #a05344;
+//$gradient: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+$secondary-color: #734046;
+$bkgrnd: #321f28;
+$accent: #e79e4f;
 
 
 .container {
@@ -10,12 +13,46 @@ $gradient: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a
 }
 
 .card {
-    background-color: rgb(255, 255, 255);
+    background-color: $accent;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 10px;
     color: #333;
+}
+
+.project-card {
+    //background-color: $accent;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 32vw;
+    height: 30vw;
+    margin: 35px;
+    color: #333;
+
+    & p1 {
+
+    }
+    & p2 {
+
+    }
+    & p3 {
+
+    }
+    & p4 {
+        
+    }
+    & img {
+        border-radius: 8px 8px 0 0;
+        height: 100%;
+        opacity: 0.8;
+        max-width: 100%;
+    }
+    &:hover {
+        transition: .1s ease;
+        opacity: 0.8;
+        filter: blur(2px);
+    }
 }
 
 .btn {
@@ -43,7 +80,15 @@ $gradient: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a
 
 .flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
